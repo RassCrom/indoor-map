@@ -1,7 +1,36 @@
 const map = (window.map = new maplibregl.Map({
     container: 'map',
     style:
-        'https://api.maptiler.com/maps/basic/style.json?key=get_your_own_OpIi9ZULNHzrESv6T2vL',
+    {
+        'id': 'raster',
+        'version': 8,
+        'name': 'Raster tiles',
+        'center': [0, 0],
+        'zoom': 0,
+        'sources': {
+            'raster-tiles': {
+                'type': 'raster',
+                'tiles': ['https://tile.openstreetmap.org/{z}/{x}/{y}.png'],
+                'tileSize': 256,
+                'minzoom': 0,
+                'maxzoom': 19
+            }
+        },
+        'layers': [
+            {
+                'id': 'background',
+                'type': 'background',
+                'paint': {
+                    'background-color': '#e0dfdf'
+                }
+            },
+            {
+                'id': 'simple-tiles',
+                'type': 'raster',
+                'source': 'raster-tiles'
+            }
+        ]
+    },
     zoom: 19,
     center: [71.428572161323359, 51.091671321981359],
     pitch: 60,
@@ -27,17 +56,17 @@ map.addLayer({
 })
 
 const popup = new maplibregl.Popup({
-closeBuuton: true,
-closeOnClick: true
+    closeBuuton: true,
+    closeOnClick: true
 });
 
 map.on('click', 'room-extrusion', (e) => {
-map.getCanvas().style.cursor = 'pointer';
+    map.getCanvas().style.cursor = 'pointer';
 
-const coordinates = e.features[0].geometry.coordinates.slice();
-console.log(e)
+    const coordinates = e.features[0].geometry.coordinates.slice();
+    console.log(e)
 
-popup.setLngLat(e.lngLat).setHTML(e.features[0].properties.name).addTo(map)
+    popup.setLngLat(e.lngLat).setHTML(e.features[0].properties.name).addTo(map)
 
 })
 
