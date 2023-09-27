@@ -8,10 +8,32 @@
     <link rel='stylesheet' href='https://unpkg.com/maplibre-gl@3.3.1/dist/maplibre-gl.css' />
 </head>
 <body>
-    <div id="map"></div>
+    <div id="map">
+        <div class="container">
+            <a class="show-stage" id="show-stage">Этажи</a>
+            <ul class="list-stages not-active">
+                <li class="stage">
+                    <a class="link-stage">
+                        Все этажи
+                    </a>
+                </li>
+                <li class="stage">
+                    <a id="first-stage" class="link-stage">
+                        1 этаж
+                    </a>
+                </li>
+                <li class="stage">
+                    <a class="link-stage">
+                        2 этаж
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
 
     <script src='https://unpkg.com/maplibre-gl@3.3.1/dist/maplibre-gl.js'></script>
-    <script src="./src/js/app.js"></script>
+    <script defer src="./src/js/map.js"></script>
+    <script defer src="./src/js/app.js"></script>
 </body>
 </html>
 

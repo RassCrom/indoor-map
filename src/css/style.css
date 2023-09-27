@@ -1,5 +1,11 @@
+*,
+*::after,
+*::before,
 body { 
     margin: 0; padding: 0; 
+    list-style: none;
+    color: black;
+    text-decoration: none;
 }
 html, body, #map { 
     height: 100%; 
@@ -7,4 +13,43 @@ html, body, #map {
 .maplibregl-popup {
     max-width: 400px;
     font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
+
+.photo-test {
+    max-width: 200px;
+    height: 150px;
+}
+
+.container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.show-stage {
+    padding: 10px 15px;
+    background-color: aliceblue;
+
+    font-size: 20px;
+    color: black;
+    cursor: pointer;
+
+    transition: all .4s ease;
+}
+
+.show-stage:hover {
+    color: blue;
+}
+
+.list-stages {
+    margin-top: 10px;
+}
+
+.stage {
+    cursor: pointer;
+}
+
+.not-active {
+    display: none;
 }
