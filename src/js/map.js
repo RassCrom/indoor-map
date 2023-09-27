@@ -40,7 +40,8 @@ const map = (window.map = new maplibregl.Map({
 map.on('load', () => {
     map.addSource('im', {
         'type': 'geojson',
-        'data': './src/ext/2im.geojson'
+        'data': './src/ext/2im_4326.geojson',
+        generateId:true
     });
     
     map.addLayer({
@@ -54,13 +55,30 @@ map.on('load', () => {
             'fill-extrusion-color': ['get', 'color'],
             'fill-extrusion-height': ['get', 'height'],
             'fill-extrusion-base': ['get', 'base_height'],
-            'fill-extrusion-opacity': 0.5
-        }
-    })
+            'fill-extrusion-opacity': .8
+        },
+        filter: ['==', ['get', 'level'], 1]
+    });
+
+    map.addLayer({
+        'id': 'room-extrusion2',
+        'type': 'fill-extrusion',
+        'source': 'im',
+        layout: {
+            visibility: 'visible',
+        },
+        paint: {
+            'fill-extrusion-color': ['get', 'color'],
+            'fill-extrusion-height': ['get', 'height'],
+            'fill-extrusion-base': ['get', 'base_height'],
+            'fill-extrusion-opacity': .9
+        },
+        filter: ['==', ['get', 'level'], 2]
+    });
 })
 
 const popup = new maplibregl.Popup({
-    closeBuuton: true,
+    closeButton: true,
     closeOnClick: true
 });
 
