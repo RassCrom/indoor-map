@@ -2,7 +2,7 @@ const showStage = document.getElementById('show-stage');
 const listStages = document.querySelector('.list-stages');
 const firstStage = document.getElementById('first-stage')
     secondStage = document.getElementById('second-stage')
-    allStage = document.getElementById('aal-stage');
+    allStage = document.getElementById('all-stage');
 
 function showStageList() {
     const checkClass = listStages.classList;

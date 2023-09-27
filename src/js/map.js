@@ -41,7 +41,7 @@ map.on('load', () => {
     map.addSource('im', {
         'type': 'geojson',
         'data': './src/ext/2im_4326.geojson',
-        generateId:true
+        generateId: true
     });
     
     map.addLayer({
