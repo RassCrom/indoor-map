@@ -1,0 +1,15 @@
+{
+"type": "FeatureCollection",
+"name": "markers_for_rooms",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "id": 3, "level": 11, "name": "Living Room", "height": 0, "base_height": 0, "color": "red", "photo": "./src/ext/example.jpg", "area_sqm": 102.86 }, "geometry": { "type": "Point", "coordinates": [ 71.428640154181849, 51.091642831388576 ] } },
+{ "type": "Feature", "properties": { "id": 4, "level": 11, "name": "Kitchen", "height": 0, "base_height": 0, "color": "orange", "photo": "./src/ext/example.jpg", "area_sqm": 97.63 }, "geometry": { "type": "Point", "coordinates": [ 71.428776451311236, 51.091564026613575 ] } },
+{ "type": "Feature", "properties": { "id": 5, "level": 11, "name": "Master Room", "height": 0, "base_height": 0, "color": "blue", "photo": "./src/ext/example.jpg", "area_sqm": 58.32 }, "geometry": { "type": "Point", "coordinates": [ 71.42868959734831, 51.091459394724957 ] } },
+{ "type": "Feature", "properties": { "id": 6, "level": 11, "name": "Another Room", "height": 0, "base_height": 0, "color": "black", "photo": "./src/ext/example.jpg", "area_sqm": 193.66 }, "geometry": { "type": "Point", "coordinates": [ 71.428628409602211, 51.091560369924203 ] } },
+{ "type": "Feature", "properties": { "id": 26, "level": 21, "name": "Another Room", "height": 10, "base_height": 10, "color": "brown", "photo": null, "area_sqm": null }, "geometry": { "type": "Point", "coordinates": [ 71.428628409602211, 51.091560369924203 ] } },
+{ "type": "Feature", "properties": { "id": 32, "level": 21, "name": "Living Room", "height": 10, "base_height": 10, "color": "purple", "photo": null, "area_sqm": null }, "geometry": { "type": "Point", "coordinates": [ 71.428640154181849, 51.091642831388576 ] } },
+{ "type": "Feature", "properties": { "id": 42, "level": 21, "name": "Kitchen", "height": 10, "base_height": 10, "color": "white", "photo": null, "area_sqm": null }, "geometry": { "type": "Point", "coordinates": [ 71.428776451311236, 51.091564026613575 ] } },
+{ "type": "Feature", "properties": { "id": 52, "level": 21, "name": "Master Room", "height": 10, "base_height": 10, "color": "gold", "photo": null, "area_sqm": null }, "geometry": { "type": "Point", "coordinates": [ 71.42868959734831, 51.091459394724957 ] } }
+]
+}
